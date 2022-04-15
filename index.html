@@ -286,8 +286,8 @@ document.addEventListener('pjax:error', (e) => {
             <span class="fui-cross"></span>
         </div>
     </div> 
-    <script src="assets/waifu-tips.js?v=1.4.2"></script>
-    <script src="assets/live2d.js?v=1.0.5"></script>
+    <script src="assets/waifu-tips.js"></script>
+    <script src="assets/live2d.js"></script>
     <script type="text/javascript">
         /* 可直接修改部分参数 */
         live2d_settings['modelId'] = 0;                  // 默认模型 ID
@@ -301,8 +301,8 @@ document.addEventListener('pjax:error', (e) => {
         live2d_settings['waifuToolFont'] = '16px';       // 工具栏字体
         live2d_settings['waifuToolLine'] = '25px';       // 工具栏行高
         live2d_settings['waifuToolTop'] = '-20px';       // 工具栏顶部边距
-        live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+        live2d_settings['waifuDraggable'] = 'unlimited';    // 拖拽样式
         /* 在 initModel 前添加 */
-        initModel("assets/waifu-tips.json?v=1.4.2")
+        initModel("assets/waifu-tips.json")
     </script>
 </body></html>

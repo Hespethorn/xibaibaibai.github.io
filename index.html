@@ -9,7 +9,7 @@
 <meta property="article:author" content="兮白白-xibaibai">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xibaibaibai.github.io/img/007.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xibaibaibai.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://xibaibaibai.github.io/img/007.jpg"><link rel="stylesheet" type="text/css" href="assets/waifu.css?v=1.4.2"/><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xibaibaibai.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -268,11 +268,42 @@ document.addEventListener('pjax:error', (e) => {
   }
 })</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
 <!-- waifu-tips.js 依赖 JQuery 库 -->
-<script src="assets/jquery.min.js?v=3.3.1"></script>
-
-<!-- 实现拖动效果，需引入 JQuery UI -->
-<script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-
-<!-- 使用 aotuload.js 引入看板娘 -->
-<script src="assets/autoload.js?v=1.4.2"></script>
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+    
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+        
+    <script src="assets/waifu-tips.js?v=1.4.2"></script>
+    <script src="assets/live2d.js?v=1.0.5"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 0;                  // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 87;         // 默认材质 ID
+        live2d_settings['modelStorage'] = false;         // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = true;       // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = true;    // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '300x267.5';        // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '285x75';    // 提示框大小
+        live2d_settings['waifuFontSize'] = '15px';       // 提示框字体
+        live2d_settings['waifuToolFont'] = '18px';       // 工具栏字体
+        live2d_settings['waifuToolLine'] = '25px';       // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-30px';       // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+        /* 在 initModel 前添加 */
+        initModel("assets/waifu-tips.json?v=1.4.2")
+    </script>
 </body></html>

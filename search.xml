@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>记录一下搭建blog的经验</title>
+      <link href="/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/"/>
+      <url>/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="blog的基础搭建"><a href="#blog的基础搭建" class="headerlink" title="blog的基础搭建"></a>blog的基础搭建</h1><p>就我而言，没有服务器，利用GitHub和hexo搭建自己的博客是最为方便和简洁的。同时hexo有着许多美观的主题，较为知名的有Next和Butterfly两个主题，我用的为Butterfly这个主题，当然你也可以随心选择其他主题，但基本的搭建过程都是一样的。<br>关于基础的搭建教程已经有了很多，我就在此贴出一些我参考过的教程链接：</p><ol><li>[详细视频教程]<a href="https://www.bilibili.com/video/BV1aV411p7Bc">https://www.bilibili.com/video/BV1aV411p7Bc</a></li><li>[butterfly-主题]<a href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a></li></ol><p>在此也感谢UP主-<a href="https://space.bilibili.com/13282871">卷二兔</a>和butterfly主题开发人员。</p><h1 id="blog的主题配置"><a href="#blog的主题配置" class="headerlink" title="blog的主题配置"></a>blog的主题配置</h1><p>当你完成基础的博客搭建步骤后，接下来可以按照你的审美和喜好进行blog的美化。<br>例如，改变网站的封面图片、文章封面等。对于文章封面，我比较建议用一张或几张图片来随机展示，如果每篇文章都使用不同的封面，可能加载图片需要更多的时间。对于图片的质量也是如此，大家可以按照自己的网速进行选择，但一般不建议用比较大的图片，像封面图这样显示较大的图片则可以选择质量较好的用来展示。<br>下面以我的blog为例介绍一下source文件夹的组成：<br><img src="/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/2022-04-16-10-37-44.png"></p><p>在你的博客文件夹根目录下存在一个source文件夹，如果你按照上面视频教程的步骤搭建的话，其从上至下依此为：</p><ol><li>友情链接（在里面的link.yml文件里编辑链接）</li><li>文章（以后你所有写的博客都在这里面）</li><li>文章分类页</li><li>博客图片（你可以将要设置的图片复制到这里，然后在要用到的地方插入）</li><li>友情链接页</li><li>文章标签页</li></ol><p>不要把个人需要的文件&#x2F;图片放在主题source文件夹里，因为在升级主题的过程中，可能会把文件覆盖删除了。在Hexo根目录的source文件夹（正是我所截图展示的）里，创建一个文件夹来放置个人文件&#x2F;图片。<br>3 5 6三个只是初始页面的文件夹，我没有做其他的配置，大家可以自行探索。美化的教程同样可以参考上面的视频和主题配置文档，继续向后阅读。<br>一切以主题配置文档为准。</p><h1 id="blog进阶美化"><a href="#blog进阶美化" class="headerlink" title="blog进阶美化"></a>blog进阶美化</h1><p>在完成以上的主题配置后，恭喜你已经拥有了一个属于自己的blog。但或许你仍想要其他的额外扩展功能，例如：</p><h2 id="网页看板娘"><a href="#网页看板娘" class="headerlink" title="网页看板娘"></a>网页看板娘</h2><p>这个目前我已经在我的博客上成功搭建了，其中的艰辛着实很大，尤其是对我这个在之前从没接触过网页开发的菜鸟来说。<br>具体的步骤以后进行补充，在此先贴出我在配置过程中参考过的教程。</p><ol><li><a href="https://www.jianshu.com/p/3a6342e16e57">https://www.jianshu.com/p/3a6342e16e57</a><br>这个较为简单，同时我也找到了自己该模型的方法，但效果不好</li><li><a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><h2 id="网页播放器"><a href="#网页播放器" class="headerlink" title="网页播放器"></a>网页播放器</h2>有待以后补充<h2 id="网页评论、留言"><a href="#网页评论、留言" class="headerlink" title="网页评论、留言"></a>网页评论、留言</h2>有待以后补充</li></ol><h1 id="markdown-all-in-one常用快捷键"><a href="#markdown-all-in-one常用快捷键" class="headerlink" title="markdown all in one常用快捷键"></a>markdown all in one常用快捷键</h1><p>Ctrl&#x2F;Cmd + B    切换粗体<br>Ctrl&#x2F;Cmd + I    切换斜体<br>Ctrl&#x2F;Cmd + Shift + ]    切换标题（上层）<br>Ctrl&#x2F;Cmd + Shift + [    切换标题（下层）<br>Ctrl&#x2F;Cmd + M    切换数学环境<br>备选方案 + C    选中&#x2F;取消选中任务列表项<br>Ctrl&#x2F;Cmd + Shift + V    切换预览<br>Ctrl&#x2F;Cmd + K V    将预览切换到侧面</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> blog搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>转载+二级标题_test</title>
       <link href="/2022/04/11/%E8%BD%AC%E8%BD%BD-%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-test/"/>
       <url>/2022/04/11/%E8%BD%AC%E8%BD%BD-%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-test/</url>

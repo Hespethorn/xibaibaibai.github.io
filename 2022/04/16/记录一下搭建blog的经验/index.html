@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>记录一下搭建blog的经验 | 兮白白的Blog</title><meta name="keywords" content="blog搭建"><meta name="author" content="兮白白-xibaibai"><meta name="copyright" content="兮白白-xibaibai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="blog的基础搭建就我而言，没有服务器，利用GitHub和hexo搭建自己的博客是最为方便和简洁的。同时hexo有着许多美观的主题，较为知名的有Next和Butterfly两个主题，我用的为Butterfly这个主题，当然你也可以随心选择其他主题，但基本的搭建过程都是一样的。关于基础的搭建教程已经有了很多，我就在此贴出一些我参考过的教程链接：  [详细视频教程]https:&#x2F;&#x2F;www.bilibi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录一下搭建blog的经验">
+<meta property="og:url" content="https://xibaibaibai.github.io/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/index.html">
+<meta property="og:site_name" content="兮白白的Blog">
+<meta property="og:description" content="blog的基础搭建就我而言，没有服务器，利用GitHub和hexo搭建自己的博客是最为方便和简洁的。同时hexo有着许多美观的主题，较为知名的有Next和Butterfly两个主题，我用的为Butterfly这个主题，当然你也可以随心选择其他主题，但基本的搭建过程都是一样的。关于基础的搭建教程已经有了很多，我就在此贴出一些我参考过的教程链接：  [详细视频教程]https:&#x2F;&#x2F;www.bilibi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xibaibaibai.github.io/img/006%20(2).jpeg">
+<meta property="article:published_time" content="2022-04-16T01:33:04.000Z">
+<meta property="article:modified_time" content="2022-04-16T05:22:32.055Z">
+<meta property="article:author" content="兮白白-xibaibai">
+<meta property="article:tag" content="blog搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xibaibaibai.github.io/img/006%20(2).jpeg"><link rel="shortcut icon" href="/img/007.jpg"><link rel="canonical" href="https://xibaibaibai.github.io/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '记录一下搭建blog的经验',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-16 13:22:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="assets/waifu.min.css?v=1.4.2"/><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/007.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/006%20(2).jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">兮白白的Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">记录一下搭建blog的经验</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-16T01:33:04.000Z" title="发表于 2022-04-16 09:33:04">2022-04-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-16T05:22:32.055Z" title="更新于 2022-04-16 13:22:32">2022-04-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="记录一下搭建blog的经验"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="blog的基础搭建"><a href="#blog的基础搭建" class="headerlink" title="blog的基础搭建"></a>blog的基础搭建</h1><p>就我而言，没有服务器，利用GitHub和hexo搭建自己的博客是最为方便和简洁的。同时hexo有着许多美观的主题，较为知名的有Next和Butterfly两个主题，我用的为Butterfly这个主题，当然你也可以随心选择其他主题，但基本的搭建过程都是一样的。<br>关于基础的搭建教程已经有了很多，我就在此贴出一些我参考过的教程链接：</p>
+<ol>
+<li>[详细视频教程]<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aV411p7Bc">https://www.bilibili.com/video/BV1aV411p7Bc</a></li>
+<li>[butterfly-主题]<a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a></li>
+</ol>
+<p>在此也感谢UP主-<a target="_blank" rel="noopener" href="https://space.bilibili.com/13282871">卷二兔</a>和butterfly主题开发人员。</p>
+<h1 id="blog的主题配置"><a href="#blog的主题配置" class="headerlink" title="blog的主题配置"></a>blog的主题配置</h1><p>当你完成基础的博客搭建步骤后，接下来可以按照你的审美和喜好进行blog的美化。<br>例如，改变网站的封面图片、文章封面等。对于文章封面，我比较建议用一张或几张图片来随机展示，如果每篇文章都使用不同的封面，可能加载图片需要更多的时间。对于图片的质量也是如此，大家可以按照自己的网速进行选择，但一般不建议用比较大的图片，像封面图这样显示较大的图片则可以选择质量较好的用来展示。<br>下面以我的blog为例介绍一下source文件夹的组成：<br><img src="/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/2022-04-16-10-37-44.png"></p>
+<p>在你的博客文件夹根目录下存在一个source文件夹，如果你按照上面视频教程的步骤搭建的话，其从上至下依此为：</p>
+<ol>
+<li>友情链接（在里面的link.yml文件里编辑链接）</li>
+<li>文章（以后你所有写的博客都在这里面）</li>
+<li>文章分类页</li>
+<li>博客图片（你可以将要设置的图片复制到这里，然后在要用到的地方插入）</li>
+<li>友情链接页</li>
+<li>文章标签页</li>
+</ol>
+<p>不要把个人需要的文件&#x2F;图片放在主题source文件夹里，因为在升级主题的过程中，可能会把文件覆盖删除了。在Hexo根目录的source文件夹（正是我所截图展示的）里，创建一个文件夹来放置个人文件&#x2F;图片。<br>3 5 6三个只是初始页面的文件夹，我没有做其他的配置，大家可以自行探索。美化的教程同样可以参考上面的视频和主题配置文档，继续向后阅读。<br>一切以主题配置文档为准。</p>
+<h1 id="blog进阶美化"><a href="#blog进阶美化" class="headerlink" title="blog进阶美化"></a>blog进阶美化</h1><p>在完成以上的主题配置后，恭喜你已经拥有了一个属于自己的blog。但或许你仍想要其他的额外扩展功能，例如：</p>
+<h2 id="网页看板娘"><a href="#网页看板娘" class="headerlink" title="网页看板娘"></a>网页看板娘</h2><p>这个目前我已经在我的博客上成功搭建了，其中的艰辛着实很大，尤其是对我这个在之前从没接触过网页开发的菜鸟来说。<br>具体的步骤以后进行补充，在此先贴出我在配置过程中参考过的教程。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a6342e16e57">https://www.jianshu.com/p/3a6342e16e57</a><br>这个较为简单，同时我也找到了自己该模型的方法，但效果不好</li>
+<li><a target="_blank" rel="noopener" href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><h2 id="网页播放器"><a href="#网页播放器" class="headerlink" title="网页播放器"></a>网页播放器</h2>有待以后补充<h2 id="网页评论、留言"><a href="#网页评论、留言" class="headerlink" title="网页评论、留言"></a>网页评论、留言</h2>有待以后补充</li>
+</ol>
+<h1 id="markdown-all-in-one常用快捷键"><a href="#markdown-all-in-one常用快捷键" class="headerlink" title="markdown all in one常用快捷键"></a>markdown all in one常用快捷键</h1><p>Ctrl&#x2F;Cmd + B    切换粗体<br>Ctrl&#x2F;Cmd + I    切换斜体<br>Ctrl&#x2F;Cmd + Shift + ]    切换标题（上层）<br>Ctrl&#x2F;Cmd + Shift + [    切换标题（下层）<br>Ctrl&#x2F;Cmd + M    切换数学环境<br>备选方案 + C    选中&#x2F;取消选中任务列表项<br>Ctrl&#x2F;Cmd + Shift + V    切换预览<br>Ctrl&#x2F;Cmd + K V    将预览切换到侧面</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">兮白白-xibaibai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xibaibaibai.github.io/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/">https://xibaibaibai.github.io/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xibaibaibai.github.io" target="_blank">兮白白的Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blog%E6%90%AD%E5%BB%BA/">blog搭建</a></div><div class="post_share"><div class="social-share" data-image="/./img/006%20(2).jpeg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/04/11/%E8%BD%AC%E8%BD%BD-%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-test/"><img class="next-cover" src="/./img/006%20(1).jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">转载+二级标题_test</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/007.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">兮白白-xibaibai</div><div class="author-info__description">欢迎你漂流至此</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xibaibaibai"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xibaibaibai" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/35401291" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="mailto:1339723586@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#blog%E7%9A%84%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">blog的基础搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#blog%E7%9A%84%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">blog的主题配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#blog%E8%BF%9B%E9%98%B6%E7%BE%8E%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text">blog进阶美化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E7%9C%8B%E6%9D%BF%E5%A8%98"><span class="toc-number">3.1.</span> <span class="toc-text">网页看板娘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">网页播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E8%AF%84%E8%AE%BA%E3%80%81%E7%95%99%E8%A8%80"><span class="toc-number">3.3.</span> <span class="toc-text">网页评论、留言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown-all-in-one%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">4.</span> <span class="toc-text">markdown all in one常用快捷键</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/" title="记录一下搭建blog的经验"><img src="/./img/006%20(2).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记录一下搭建blog的经验"/></a><div class="content"><a class="title" href="/2022/04/16/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%90%AD%E5%BB%BAblog%E7%9A%84%E7%BB%8F%E9%AA%8C/" title="记录一下搭建blog的经验">记录一下搭建blog的经验</a><time datetime="2022-04-16T01:33:04.000Z" title="发表于 2022-04-16 09:33:04">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E8%BD%AC%E8%BD%BD-%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-test/" title="转载+二级标题_test"><img src="/./img/006%20(1).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="转载+二级标题_test"/></a><div class="content"><a class="title" href="/2022/04/11/%E8%BD%AC%E8%BD%BD-%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-test/" title="转载+二级标题_test">转载+二级标题_test</a><time datetime="2022-04-11T13:50:55.000Z" title="发表于 2022-04-11 21:50:55">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/code-test-2/" title="code-test-2"><img src="/./img/006%20(2).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="code-test-2"/></a><div class="content"><a class="title" href="/2022/04/11/code-test-2/" title="code-test-2">code-test-2</a><time datetime="2022-04-11T11:10:29.000Z" title="发表于 2022-04-11 19:10:29">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA/" title="代码演示"><img src="/./img/006%20(1).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="代码演示"/></a><div class="content"><a class="title" href="/2022/04/11/%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA/" title="代码演示">代码演示</a><time datetime="2022-04-11T04:12:27.000Z" title="发表于 2022-04-11 12:12:27">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/10/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" title="图片测试"><img src="/./img/006%20(2).jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片测试"/></a><div class="content"><a class="title" href="/2022/04/10/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" title="图片测试">图片测试</a><time datetime="2022-04-10T14:03:20.000Z" title="发表于 2022-04-10 22:03:20">2022-04-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/./img/006%20(2).jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 兮白白-xibaibai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><!-- waifu-tips.js 依赖 JQuery 库 --> <script src="assets/jquery.min.js?v=3.3.1"></script>
+<!-- 实现拖动效果，需引入 JQuery UI --> <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+<div class="waifu"> <div class="waifu-tips"></div> <canvas id="live2d" class="live2d"></canvas> <div class="waifu-tool"> <span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span> </div> </div> <script src="assets/waifu-tips.min.js?v=1.4.2"></script> <script src="assets/live2d.min.js?v=1.0.5"></script> <script type="text/javascript"> /* 可直接修改部分参数 */ live2d_settings['modelId'] = 1;                  /* 默认模型 ID*/ live2d_settings['modelTexturesId'] = 87;         /* 默认材质 ID*/ live2d_settings['modelStorage'] = true;         /*  不储存模型 ID  true存储  false不存储*/ live2d_settings['canCloseLive2d'] = true;       /*  隐藏 关闭看板娘 按钮 true不关闭 false关闭*/ live2d_settings['canTurnToHomePage'] = false;   /*  隐藏 返回首页 按钮*/ live2d_settings['waifuSize'] = '250x250';        /*  看板娘大小*/ live2d_settings['waifuTipsSize'] = '250x70';    /* 提示框大小*/ live2d_settings['waifuFontSize'] = '12px';       /*  提示框字体*/ live2d_settings['waifuToolFont'] = '17px';       /*  工具栏字体*/ live2d_settings['waifuToolLine'] = '24px';       /* 工具栏行高*/ live2d_settings['waifuToolTop'] = '-10px';       /* 工具栏顶部边距*/ live2d_settings['waifuDraggable'] = 'unlimited';    /*  拖拽样式*/ live2d_settings['waifuDraggableRevert'] = false; /* 在 initModel 前添加 */ initModel("assets/waifu-tips.json?v=1.4.2") </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
